@@ -50,7 +50,7 @@ namespace SportsStore.WebUI.Controllers
             if (cart == null)
             {
                 cart = new Cart();
-                Session["Cart"] = cart;// nqs nuk e gjejme krijojme nje objekt te tipit cart dhe me pas i japim kete vlere sessionit me emer Cart
+                Session["Cart"] = cart;
 
             }
             return cart;
@@ -83,10 +83,7 @@ namespace SportsStore.WebUI.Controllers
         [HttpPost]
         public ViewResult Checkout(ShippingDetails shippingDetails)
         {
-            //if(GetCart().Lines.Count() == 0)
-            //{
-            //    ModelState.AddModelError("", "Sorry , your cart is empty!");
-            //}
+            
 
             if(ModelState.IsValid)
             {
