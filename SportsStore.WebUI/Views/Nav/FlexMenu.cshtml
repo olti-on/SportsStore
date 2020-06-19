@@ -1,0 +1,42 @@
+﻿
+@model IEnumerable<string>
+
+@{
+    bool horizontal = ((bool)(ViewContext.RouteData.Values["horizontalLayout"] ?? false));
+    string wrapperClasses = horizontal ? "btn-group btn-group-sm btn-group-justified" : null;
+}
+
+
+
+<div class="topnav" id="myTopnav">
+    <a href="javascript:void(0);" class="icon tagA" onclick="myFunction()">
+        <center><i class="fa fa-bars"></i></center>
+    </a>
+    @Html.ActionLink("Home", "List", "Product", null,
+           new { @class = "tagA" + (null == ViewBag.selectedCategory ? " active" : "")})
+
+    @foreach (var link in Model)
+    {
+
+        @Html.RouteLink(link, new {
+       controller = "Product",
+       action = "List",
+       category = link,
+       page = 1
+   }, new {
+       @class = "tagA" + (link == ViewBag.selectedCategory ? " active" : "" )
+     })
+
+    }
+
+
+</div>
+
+
+
+
+
+
+
+
+
