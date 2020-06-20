@@ -78,9 +78,9 @@
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
-    <Compile Include="Migrations\202006190829579_InitialMigrations.cs" />
-    <Compile Include="Migrations\202006190829579_InitialMigrations.Designer.cs">
-      <DependentUpon>202006190829579_InitialMigrations.cs</DependentUpon>
+    <Compile Include="Migrations\202006191521439_FirstMigration.cs" />
+    <Compile Include="Migrations\202006191521439_FirstMigration.Designer.cs">
+      <DependentUpon>202006191521439_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,8 +90,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006190829579_InitialMigrations.resx">
-      <DependentUpon>202006190829579_InitialMigrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006191521439_FirstMigration.resx">
+      <DependentUpon>202006191521439_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

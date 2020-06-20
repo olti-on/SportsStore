@@ -3,7 +3,7 @@ namespace SportsStore.Domain.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialMigrations : DbMigration
+    public partial class FirstMigration : DbMigration
     {
         public override void Up()
         {

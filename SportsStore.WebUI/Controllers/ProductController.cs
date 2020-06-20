@@ -22,8 +22,7 @@ namespace SportsStore.WebUI.Controllers
         // GET: Product
         public ViewResult List( string category , int page = 1)
         {
-            try
-            {
+            
                 ProductsListViewModel model = new ProductsListViewModel
                 {
                     Products = repository.Products
@@ -42,13 +41,9 @@ namespace SportsStore.WebUI.Controllers
                     },
                     CurrentCategory = category
                 };
-            }
-            catch (Exception ex)
-            {
+            
 
-            }
-
-            return View(new ProductsListViewModel());
+            return View(model);
         }
 
         public FileContentResult GetImage(int productId)
